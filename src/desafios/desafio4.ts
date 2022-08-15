@@ -18,9 +18,9 @@ let password;
 let sessionId;
 let listId = '7101979';
 
-let loginButton = document.getElementById('login-button') as HTMLButtonElement;
-let searchButton = document.getElementById('search-button') as HTMLButtonElement;
-let searchContainer = document.getElementById('search-container') as HTMLInputElement;
+let loginButton = document.getElementById('login-button');
+let searchButton = document.getElementById('search-button');
+let searchContainer = document.getElementById('search-container');
 
 loginButton.addEventListener('click', async () => {
   await criarRequestToken();
