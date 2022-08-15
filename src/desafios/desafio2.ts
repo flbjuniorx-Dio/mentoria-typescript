@@ -1,4 +1,4 @@
-/* Como podemos melhorar o esse código usando TS?
+/* Como podemos melhorar o esse código usando TS? 
 
 let pessoa1 = {};
 pessoa1.nome = "maria";
@@ -22,19 +22,27 @@ let pessoa4 = {
     profissao = "padeiro"
 }
 */
-var Profissao;
-(function (Profissao) {
-    Profissao[Profissao["padeiro"] = 0] = "padeiro";
-    Profissao[Profissao["atriz"] = 1] = "atriz";
-})(Profissao || (Profissao = {}));
-var pessoa1 = {
+
+enum Profissao {
+    'padeiro',
+    'atriz'
+}
+type Pessoa = {
+    nome: string,
+    idade: number,
+    profissao: Profissao
+}
+
+let pessoa1: Pessoa = {
     nome: 'Maria',
-    idade: 29,
+    idade:  29,
     profissao: Profissao.atriz
-};
-var pessoa2 = {
+}
+
+let pessoa2: Pessoa = {
     nome: 'Roberto',
     idade: 19,
     profissao: Profissao.padeiro
-};
+}
+
 console.log(pessoa1, pessoa2);

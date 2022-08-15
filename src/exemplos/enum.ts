@@ -43,3 +43,5 @@ const mario: Pessoa = {
     casado: false,
     trabalho: Profissao.Engenheiro // Tudo padronizado e consistente
 }
+
+console.log(mario)
